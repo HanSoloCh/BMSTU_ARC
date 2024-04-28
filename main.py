@@ -2,7 +2,7 @@ from funcs import LENGTH, find_data_for_karnaugh_map, find_j_k_triggers_exits, m
 
 
 if __name__ == "__main__":
-    nums = list(map(lambda x: bin(int(x))[2:].rjust(LENGTH, '0'), input().split()))
+    nums = list(map(lambda x: bin(int(x))[2:].rjust(LENGTH, '0'), input('Введите числа через пробел').split()))
     map_data_j, map_data_k = find_data_for_karnaugh_map(nums)
     exit_j, exit_k = find_j_k_triggers_exits(nums, map_data_j, map_data_k)
 
